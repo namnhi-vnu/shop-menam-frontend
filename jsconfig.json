@@ -1,7 +1,9 @@
 {
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./*"]
+    "compilerOptions": {
+        "paths": {
+            "@/*": ["./*"]
+        },
+        "lib": ["es6", "dom"],
+        "target": "es6"
     }
-  }
 }

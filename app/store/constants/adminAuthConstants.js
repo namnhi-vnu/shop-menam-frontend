@@ -1,0 +1,2 @@
+export const CHECK_IS_ADMIN = "CHECK_IS_ADMIN";
+export const IS_LOADING_CHECK = "IS_LOADING_CHECK";
