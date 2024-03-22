@@ -34,7 +34,7 @@ const NavbarLeftAccount = () => {
                                                 <div className="flex items-center justify-start gap-3 pb-3 max-md:pb-2 border-b border-b-gray-200">
                                                     <p>
                                                         <Image
-                                                            src={`${avatar || "/image-default.png"} `}
+                                                            src={`${avatar || "https://res.cloudinary.com/dfnwjuvbc/image/upload/v1711101114/images/en0yhhjtsilnaqakjifo.png"}`}
                                                             width={50}
                                                             height={50}
                                                             alt=""

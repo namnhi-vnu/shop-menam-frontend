@@ -174,7 +174,7 @@ const page = () => {
                                                         <div>
                                                             <div>
                                                                 <Image
-                                                                    src={`${avatar || "/image-default.png"} `}
+                                                                    src={`${avatar || "https://res.cloudinary.com/dfnwjuvbc/image/upload/v1711101114/images/en0yhhjtsilnaqakjifo.png"}`}
                                                                     width={120}
                                                                     height={120}
                                                                     alt=""
@@ -235,7 +235,7 @@ const page = () => {
                                                 <div>
                                                     <div>
                                                         <Image
-                                                            src={`${avatar || "/image-default.png"} `}
+                                                            src={`${avatar || "https://res.cloudinary.com/dfnwjuvbc/image/upload/v1711101114/images/en0yhhjtsilnaqakjifo.png"}`}
                                                             width={120}
                                                             height={120}
                                                             alt=""
