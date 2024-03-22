@@ -18,7 +18,7 @@ const NavbarLeftAccount = () => {
     const handlerSupmitLogout = () => {
         handlerLogout(["MeNamUserToken", "MeNamUser"]);
     };
-    console.log(avatar, firstname);
+
     return (
         <div className="min-w-[290px] h-[527px] max-md:h-auto shadow rounded-md ">
             <div className="">
