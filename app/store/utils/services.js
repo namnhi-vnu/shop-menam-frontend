@@ -1,4 +1,4 @@
-export const BASE_URL = "http://192.168.1.4:5000/api";
+export const BASE_URL = "https://shop-menam-backend.vercel.app/api";
 import axios from "axios";
 export const postRequest = async (url, body) => {
     const response = await axios.post(url, body, {
