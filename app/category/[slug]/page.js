@@ -12,7 +12,7 @@ const page = ({ params }) => {
     const { state, getProductsByCategory } = useContext(ProductContext);
     const { slug } = params;
     const { isLoading, productbyCategory, menuCategory } = state;
-    console.log(menuCategory?.getAllCategory);
+
     useEffect(() => {
         getProductsByCategory(slug);
     }, []);
