@@ -52,10 +52,7 @@ const page = () => {
                 <div>
                     <div className="flex items-start gap-8 max-md:block">
                         <div className="">
-                            <NavbarLeftAccount
-                                avatar={avatar}
-                                firstname={firstname}
-                            />
+                            <NavbarLeftAccount />
                         </div>
                         <div className="flex-1 shadow h-[527px] max-md:h-auto">
                             <div>

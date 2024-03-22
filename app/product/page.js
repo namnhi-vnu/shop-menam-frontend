@@ -8,7 +8,7 @@ import ProductLoading from "../components/ProductLoading";
 const page = () => {
     const { state, dispatch } = useContext(ProductContext);
     const { allProducts } = state;
-    console.log(allProducts);
+
     return (
         <Layout type="main">
             <div className="py-8">
