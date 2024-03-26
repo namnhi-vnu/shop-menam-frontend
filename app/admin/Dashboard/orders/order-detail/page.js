@@ -16,9 +16,9 @@ const page = (param) => {
         orderDetail,
         getOrderStatus: { orderStatus },
     } = state;
-    console.log(orderStatus);
+
     useEffect(() => {
-        getOrderDetails(param.searchParams["order-id"]);
+        getOrderDetails(param?.searchParams?.orderId);
     }, []);
     const provinces = [
         { label: "Chờ xử lý", value: "CHOXULY" },
@@ -34,8 +34,7 @@ const page = (param) => {
         dispatch(setUpdateOrderDetail({ orderStatus: e.label }));
     };
     const handlerUpdateStatus = () => {
-        console.log(orderStatus);
-        updateOrderStatus(param.searchParams["order-id"], orderStatus);
+        updateOrderStatus(param?.searchParams?.orderId, orderStatus);
     };
     return (
         <div>

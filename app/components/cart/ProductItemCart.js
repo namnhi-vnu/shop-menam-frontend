@@ -19,7 +19,7 @@ const ProductItemCart = ({ product }) => {
                                         product?.title ||
                                         product?.product?.title
                                     }
-                                    className="rounded-md"
+                                    className="rounded-md w-[60px] h-[60px]"
                                 />
                             </Link>
                         </div>

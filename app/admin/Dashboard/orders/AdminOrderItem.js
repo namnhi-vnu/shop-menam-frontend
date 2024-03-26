@@ -12,7 +12,7 @@ const AdminOrderItem = ({ orderItem }) => {
     return (
         <div className="p-4  border-b border-gray-600 hover:bg-gray-700">
             <Link
-                href={`/admin/Dashboard/orders/order-detail/?order-id=${orderItem?._id}`}
+                href={`/admin/Dashboard/orders/order-detail/?orderId=${orderItem?._id}`}
             >
                 <div className="flex items-center gap-3 text-sm ">
                     <div className="w-[8%] overflow-hidden">

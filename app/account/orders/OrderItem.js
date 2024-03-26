@@ -116,7 +116,7 @@ const OrderItem = ({ product }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-end items-center gap-4 max-md:px-2 max-md:gap-2">
+                        <div className="flex justify-end items-center gap-4 max-md:px-2 max-md:gap-2 max-sm:flex-col">
                             <Link
                                 href="#"
                                 className="bg-orange-500 inline-block rounded-md py-2 px-4 text-white hover:opacity-80 max-md:px-2 max-md:text-sm"

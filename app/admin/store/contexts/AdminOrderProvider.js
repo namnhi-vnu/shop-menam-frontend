@@ -43,7 +43,7 @@ const AdminOrderProvider = ({ children }) => {
                         },
                     },
                 );
-                console.log(response.data);
+
                 if (response.data.success) {
                     dispatch(setGetAllOrder(response.data.alluserorders));
                 }

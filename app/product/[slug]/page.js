@@ -156,7 +156,7 @@ const page = ({ params }) => {
                                     </div>
                                     <div className="py-4">
                                         <div className="">
-                                            <div className="flex items-center gap-8 py-2 px-2 bg-orange-50">
+                                            <div className="flex items-center gap-8 py-2 px-2 bg-orange-50 max-md:flex-col max-md:gap-2 max-md:items-end">
                                                 <div className="flex items-center gap-4">
                                                     <span className="text-base text-color-old-price line-through font-semibold">
                                                         {formatterPrice.format(

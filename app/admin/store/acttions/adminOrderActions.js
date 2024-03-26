@@ -17,7 +17,6 @@ export const setGetOrderDetail = (payload) => {
     };
 };
 export const setUpdateOrderDetail = (payload) => {
-    console.log(payload);
     return {
         type: UPDATE_STATUS_ORDER,
         payload,

@@ -28,9 +28,8 @@ const AuthAdmin = () => {
     useEffect(() => {
         const checkCookieExpiration = async () => {
             const getToken = checkToken();
-            console.log("checy", getToken);
+
             if (getToken) {
-                console.log("hihi có admin");
                 try {
                     const token = getToken.token;
                     const getUserId = getToken._id;
@@ -60,9 +59,7 @@ const AuthAdmin = () => {
             } else {
                 router.push("/admin/login");
                 // dispatch(setIsLoadingCheckAdmin(false));
-                console.log("hihi không có admin");
             }
-            console.log(isLoadingCheck);
         };
 
         checkCookieExpiration();

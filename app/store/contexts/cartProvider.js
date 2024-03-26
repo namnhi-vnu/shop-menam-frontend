@@ -308,6 +308,54 @@ const CartProvider = ({ children }) => {
                 );
 
                 dispatch(setAddCart({ cart: responseGet.data }));
+            } else {
+                const cartNotUser = localStorage.getItem("cartNotUser");
+                if (cartNotUser) {
+                    const cart = JSON.parse(cartNotUser);
+                    if (cart.products.length > 1) {
+                        const productIndex = cart.products.findIndex(
+                            (product) => product.product._id === id,
+                        );
+                        if (productIndex !== -1) {
+                            cart.products.splice(productIndex, 1);
+
+                            // Tính lại tổng giá trị của tất cả sản phẩm trong giỏ hàng
+                            const totalPrice = cart.products.reduce(
+                                (total, product) => {
+                                    return (
+                                        total +
+                                        product.count * product.product.price
+                                    );
+                                },
+                                0,
+                            );
+
+                            // Cập nhật giỏ hàng với sản phẩm mới và tổng tiền mới
+                            const updatedCart = {
+                                cartTotal: totalPrice,
+                                products: cart.products,
+                            };
+                            dispatch(setAddCartNotUser(updatedCart));
+
+                            // Lưu lại giỏ hàng đã được cập nhật vào localStorage
+                            localStorage.setItem(
+                                "cartNotUser",
+                                JSON.stringify(updatedCart),
+                            );
+
+                            console.log(updatedCart);
+                        } else {
+                            console.log(
+                                "Không tìm thấy sản phẩm trong giỏ hàng.",
+                            );
+                        }
+                    } else {
+                        localStorage.removeItem("cartNotUser");
+                        dispatch(setAddCartNotUser({ cart: [] }));
+                    }
+                } else {
+                    console.log("Không có dữ liệu trong localStorage.");
+                }
             }
         } catch (error) {}
     };

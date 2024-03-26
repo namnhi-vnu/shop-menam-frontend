@@ -60,7 +60,10 @@ const page = ({ params }) => {
                                             <ul>
                                                 {menuCategory?.getAllCategory?.map(
                                                     (cate) => (
-                                                        <li className="pb-2">
+                                                        <li
+                                                            className="pb-2"
+                                                            key={cate._id}
+                                                        >
                                                             <Link
                                                                 href={cate.slug}
                                                                 className="hover:text-orange-500 hover:bg-orange-50 p-1 block"

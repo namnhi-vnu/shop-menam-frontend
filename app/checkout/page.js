@@ -467,7 +467,7 @@ const page = () => {
                                                                                 khoản
                                                                             </span>
                                                                             <span>
-                                                                                0123456789
+                                                                                4830656731
                                                                             </span>
                                                                         </div>
                                                                         <div className="flex items-center justify-between border-b border-dashed border-gray-200">

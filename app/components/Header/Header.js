@@ -70,7 +70,7 @@ const Header = () => {
                             </div>
                             {/* end search mobile */}
                             {/* Logo */}
-                            <div className="logo min-w-[150px] max-md:min-w-auto pb-3 max-lg:pb-0 max-md:pb-0 text-center">
+                            <div className="logo min-w-[150px] max-md:min-w-auto pb-3 max-lg:pb-0 max-md:pb-0 max-md:text-center">
                                 <h1>
                                     <Link
                                         href="/"

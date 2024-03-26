@@ -4,7 +4,6 @@ import { CiTrash } from "react-icons/ci";
 import { BiMessageSquareEdit } from "react-icons/bi";
 import { formatterPrice } from "@/app/store/utils/FormatPrice";
 const AdminProductItem = ({ product, index, handlerDeleteProduct }) => {
-    console.log(product);
     return (
         <div className="py-4 border-b border-gray-600">
             <div className="flex items-center gap-2">

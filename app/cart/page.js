@@ -9,6 +9,7 @@ import ShipmentDetails from "../components/ShipmentDetails";
 import { useContext } from "react";
 import CartContext from "../store/contexts/cartContext";
 import { formatterPrice } from "../store/utils/FormatPrice";
+
 const page = () => {
     const { state, dispatch, removeCart } = useContext(CartContext);
     const { cart } = state;
@@ -20,7 +21,7 @@ const page = () => {
         removeCart(id);
     };
 
-    if (cart?.cart === null || cart?.length === 0) {
+    if (cart?.cart === null || cart?.length === 0 || cart === null) {
         return (
             <Layout type="main">
                 <div className="container mx-auto py-14">
@@ -109,6 +110,9 @@ const page = () => {
                                                                     ._id
                                                             }
                                                             product={product}
+                                                            handlerRemoveCartItem={
+                                                                handlerRemoveCartItem
+                                                            }
                                                         />
                                                     ),
                                                 )}

@@ -14,7 +14,10 @@ const ProductCartItem = ({ product, handlerRemoveCartItem }) => {
     const handerPlus = (productId, quantity, action) => {
         setUpdatePlusCart(cart, productId, quantity, action);
     };
-
+    // console.log(product?.product?._id);
+    const handlerRemoveCartItems = (id) => {
+        handlerRemoveCartItem(id);
+    };
     return (
         <div>
             <div className="p-5 border-b border-gray-100">
@@ -125,7 +128,7 @@ const ProductCartItem = ({ product, handlerRemoveCartItem }) => {
                             <div>
                                 <button
                                     onClick={() =>
-                                        handlerRemoveCartItem(
+                                        handlerRemoveCartItems(
                                             product?.product?._id,
                                         )
                                     }
