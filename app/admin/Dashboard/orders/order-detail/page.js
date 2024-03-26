@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 
 import Select from "react-select";
 import AdminProductOrderDetailItem from "./AdminProductOrderDetailItem";
@@ -10,6 +11,10 @@ import StatusHistoryOrder from "./StatusHistoryOrder";
 import { setUpdateOrderDetail } from "@/app/admin/store/acttions/adminOrderActions";
 
 const page = (param) => {
+    const searchParams = useSearchParams();
+
+    const orderId = searchParams.get("orderId");
+    // const { orderId } = router.query;
     const { state, dispatch, getOrderDetails, updateOrderStatus } =
         useContext(AdminOrderContext);
     const {
@@ -18,7 +23,7 @@ const page = (param) => {
     } = state;
 
     useEffect(() => {
-        getOrderDetails(param?.searchParams?.orderId);
+        getOrderDetails(orderId);
     }, []);
     const provinces = [
         { label: "Chờ xử lý", value: "CHOXULY" },
@@ -34,7 +39,7 @@ const page = (param) => {
         dispatch(setUpdateOrderDetail({ orderStatus: e.label }));
     };
     const handlerUpdateStatus = () => {
-        updateOrderStatus(param?.searchParams?.orderId, orderStatus);
+        updateOrderStatus(orderId, orderStatus);
     };
     return (
         <div>
